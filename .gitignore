@@ -1,0 +1,6 @@
+/node_modules
+.env
+
+/uploads/Admin/*
+/uploads/User/*
+/uploads/Misc/*
