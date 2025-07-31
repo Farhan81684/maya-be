@@ -118,6 +118,7 @@ const CallToAction = async (req, res) => {
            VALUES (?, ?, ?, ?, ?)`,
             [name, email_id, email_sent, conversation_summary, talk_time]
         )
+        console.log(req?.body);
         conn.release();
         return res.status(200).json({ message: 'KPIs updated successfully', payload: req?.body });
 

@@ -216,6 +216,7 @@ const CreateAdmin = async (req, res) => {
 const GetAdmins = async (req, res) => {
 
     try {
+        console.log('GetAdmins');
 
         const conn = await pool.getConnection();
         const [admins] = await conn.query('SELECT * FROM user WHERE role_id = ?', [Static.roles.ADMIN]);

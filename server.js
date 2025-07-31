@@ -41,7 +41,7 @@ app.use('/server/screening-form', screeningFormRoutes);
 
 
 //test
-app.get('/server', (req, res) => {
+app.get('/', (req, res) => {
   res.status(200).json({ message: 'Welcome to the Analytics API!' });
 });
 
