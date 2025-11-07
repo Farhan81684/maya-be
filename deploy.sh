@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# PASSWORD : yZbaSUlY6'o8x.Oiz;5N
+# PASSWORD : fCE5;tS5?#pd2tX'(S6/
 
 # === SSH CONFIG ===
 SSH_USER="root"
@@ -22,7 +22,7 @@ echo "📦 Installing frontend dependencies..."
 npm install
 
 echo "🔁 Restarting PM2 process ID"
-pm2 restart 14
+pm2 restart 13
 pm2 save
 EOF
 
