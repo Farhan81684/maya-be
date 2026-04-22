@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: maya-be-service
+spec:
+  selector:
+    app: maya-be
+  ports:
+    - protocol: TCP
+      port: 4000
+      targetPort: 4000
+      nodePort: 31000 #  API hit 
+  type: NodePort

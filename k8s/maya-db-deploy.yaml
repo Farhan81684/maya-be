@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: maya-db
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: maya-db
+  template:
+    metadata:
+      labels:
+        app: maya-db
+    spec:
+      containers:
+      - name: mysql
+        image: mysql:8.0
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: maya-db-secret
+              key: mysql-root-password
+        - name: MYSQL_DATABASE
+          value: maya_db
+        ports:
+        - containerPort: 3306
+        volumeMounts:
+        - name: mysql-storage
+          mountPath: /var/lib/mysql
+      volumes:
+      - name: mysql-storage
+        persistentVolumeClaim:
+          claimName: maya-pvc

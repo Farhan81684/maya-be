@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: maya-be-config
+data:
+  DB_HOST: "maya-db"
+  DB_USER: "root"
+  DB_NAME: "maya_db"
+  PORT: "4000"
