@@ -247,7 +247,7 @@ app.get("/", (req, res) => {
 // }
 
 app.use("/server", (req, res) => {
-  res.status(200).json({ message: "Welcome to the Analytics API!" });
+  res.status(200).json({ message: "Farhan Welcome to the Analytics API!" });
 });
 
 // OPTIONAL: Initialize / ensure DB tables exist.
